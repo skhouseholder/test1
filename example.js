@@ -6,8 +6,15 @@ var http = require('http');
 	filename = request.url.replace(/^\//, '');
 	
 	fs.readFile(filename, function (err, data) {
-		response.writeHead(200, {'Content-Type': 'text/html'});
-		response.end(data);
+		if (err) {
+			response.writeHead(404, {'Content-Type': 'text/plain'});
+			response.end('404 not found =(');
+		} else {
+			setTimeout(function () {
+				response.writeHead(200, {'Content-Type': 'text/html'});
+				response.end(data);
+			}, 2000);
+		}
 	});
  };
 

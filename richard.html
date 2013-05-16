@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			.loading {
+				display: none;
+				margin: 0 auto;
+			}
+			
+			.loading-placeholder {
+				height: 276px;
+			}
+		</style>
+	
+		<script src="jquery-2.0.0.min.js"></script>
+		<script>
+		
+		var additionalPagesRequested = 0;
+		var additionalPagesLoaded = 0;
+		var fileToRequest = "";
+		
+/*		$(window).scroll(function() {
+			var distance = $(window).scrollTop() - $(document).height() + $(window).height();
+			console.log("scrollTop = ", $(window).scrollTop());
+			console.log("doc height = ", $(document).height());
+			console.log("window height = ", $(window).height());
+			console.log("***distance = ",distance);
+		}); */
+		
+		$(window).scroll(function() {
+			/* console.log("scrollTop = ", $(window).scrollTop());
+			console.log("doc height = ", $(document).height());
+			console.log("window height = ", $(window).height());
+			console.log("innerHeight = ", $(window).attr("innerHeight"));
+			console.log($(window)); */
+			
+			if($(window).scrollTop() + $(window).height() == $(document).height()) {
+				
+				$('.loading').css('display', 'block');
+				additionalPagesRequested++;
+								
+				fileToRequest = "scroll" + additionalPagesRequested + ".html";
+				
+				
+				$.get(fileToRequest, function(response) {
+			
+					$("<p></p>").html(response).appendTo('.content');
+					additionalPagesLoaded++;
+					
+				});
+			}
+		});
+		
+		
+
+		</script>
+	</head>
+	<body>
+	
+		<div class="content">
+			Richard Phillips Feynman (May 11, 1918 – February 15, 1988)[2] was an American theoretical physicist known for his work in the path integral formulation of quantum mechanics, the theory of quantum electrodynamics, and the physics of the superfluidity of supercooled liquid helium, as well as in particle physics (he proposed the parton model). For his contributions to the development of quantum electrodynamics, Feynman, jointly with Julian Schwinger and Sin-Itiro Tomonaga, received the Nobel Prize in Physics in 1965. He developed a widely used pictorial representation scheme for the mathematical expressions governing the behavior of subatomic particles, which later became known as Feynman diagrams. During his lifetime, Feynman became one of the best-known scientists in the world. In a 1999 poll of 130 leading physicists worldwide by the British journal Physics World he was ranked as one of the ten greatest physicists of all time.[3]
+
+			He assisted in the development of the atomic bomb and was a member of the Rogers Commission, the panel that investigated the Space Shuttle Challenger disaster. In addition to his work in theoretical physics, Feynman has been credited with pioneering the field of quantum computing[4][5] and introducing the concept of nanotechnology.[6] He held the Richard Chace Tolman professorship in theoretical physics at the California Institute of Technology.
+
+			Feynman was a keen popularizer of physics through both books and lectures, notably a 1959 talk on top-down nanotechnology called, There's Plenty of Room at the Bottom, and the three volume publication of his undergraduate lectures, The Feynman Lectures on Physics. Feynman also became known through his semi-autobiographical books, Surely You're Joking, Mr. Feynman! and What Do You Care What Other People Think?, and books written about him, such as Tuva or Bust!.
+			
+			In a dance club, a young man is taken by a young woman, Marty (Kate Twa), for casual sex. The young man dies afterwards, and Marty leaves the room as a man (Peter Stebbings). FBI agents Fox Mulder (David Duchovny) and Dana Scully (Gillian Anderson) are called to the scene; Mulder believes that the man's death was caused by a fatal dose of pheromones. There is also ambiguity in similar murders as to the sex of the killer. Evidence from the crime scene leads the duo to an Amish-type community in Massachusetts which Mulder calls the Kindred.
+
+		Mulder approaches some of the Kindred, only to be shunned. Meanwhile, Scully befriends a member, Brother Andrew (Brent Hinkley), who is reluctant to talk. While shaking hands with him, Scully appears entranced, not coming to until Mulder catches her attention. The agents visit the Kindred's remote community, where they are asked to surrender their guns before entering. Mulder and Scully are invited to dinner. When the Kindred refuse to allow Scully to treat Brother Aaron, a sick participant at the table, Brother Andrew states that the Kindred take care of their own. Meanwhile, in another nightclub, a man convinces a girl to dance with him by touching her hand.
+
+		When the Kindred escort the agents out of the village, Mulder comments on the lack of children in the community and states that he recognizes some of the same faces from photographs taken in the 1930s. Curious, he returns to the village that night, and hears chanting as a procession of the Kindred moves to a barn. Scully is led off by Brother Andrew, who claims to be able to give her information about the murderer, whom he calls Brother Martin. Downstairs in the barn, the group can be seen bathing Brother Aaron's body in watery clay. Mulder hides in a crevice, where he discovers that the sick man has been buried alive and has begun to take on feminine features. Meanwhile, Brother Andrew uses his power to seduce Scully. She is unable to resist, and eventually needs to be rescued by Mulder. The agents are again escorted out of the village.
+
+		Another man, Michael (Nicholas Lea), is having sex with the female form of Brother Martin in a parked car, before a patrol officer breaks them up. As Michael suddenly starts retching, the officer is attacked by Brother Martin, who changes into a man and escapes. In the hospital Michael reluctantly reveals to Mulder and Scully that when he looked out of the car, the girl he was with "looked like a man". The agents are then alerted about activity on a previous victim's credit card, which was stolen by Brother Martin. The agents chase Brother Martin into an alley, only to have the Kindred appear and take him away. That night the agents rush back to the village which now bears a deserted look. The underground tunnels are blocked entirely with the white clay. Mulder and Scully walk into the nearby field where they find a large crop circle, suggesting that the Kindred are aliens.[2][3]
+
+		Production [edit]
+
+
+
+		Peter Stebbings was cast due to his similarity to actress Kate Twa; both portrayed versions of the same character.
+		While discussing the installment's origins, producer Glen Morgan said that he "wanted an episode with more of a sexy edge".[4] It proved difficult to portray sex as convincingly scary, which caused the producers to introduce the concept of "people like the Amish who are from another planet".[4] "Gender Bender" was penned by freelance writers Larry and Paul Barber, whose initial draft focused heavily on the contrast between the farming community of the Kindred and a version of city life "with very sexual connotations", influenced by the works of Swiss artist H. R. Giger.[5] This script went through various rewrites during the development process, including the removal of a scene where someone's crotch rots away, to address concerns about the content of the episode.[6] The chants uttered by the Kindred were not in the script handed in by the Barbers; they were added later by producer Paul Rabwin.[7]
+
+		The character of Marty was portrayed by two actors—Kate Twa plays its female form and Peter Stebbings the male. Twa was the first of the two to be cast, leading producer R. W. Goodwin to base the casting of Stebbings mostly on his "very strong resemblance" to the actress.[8] This resemblance was exploited in a scene showing Twa morphing into Stebbings; however, Goodwin felt that the two actors were too similar for the effect to be readily apparent, "zapp[ing] the energy out of the moment".[8] Nicholas Lea, who played a would-be victim in the episode, would return to the series in a recurring role as Alex Krycek, beginning with the second season's "Sleepless".[6][9] Twa would also return that season, playing a former colleague of Scully in "Soft Light".[10]
+
+		"Gender Bender" marked Rob Bowman's directorial debut on the series; he would become one of the series' most prolific directors,[6] even directing the 1998 film adaptation, The X-Files: Fight the Future.[11] Bowman found "Gender Bender" a difficult episode to work on—the script had initially called for lantern light to illuminate several scenes, but this was found to be unworkable. In addition, an interior set constructed to represent the catacombs under the Kindred's barn was so encumbering to film in that a second unit crew were required to reshoot a large degree of camera coverage. This need for extra footage necessitated an additional day of filming for scenes featuring Duchovny.[12]
+
+		The exterior shots of the village inhabited by the Kindred were filmed at a historic farm preserved from the 1890s in Langley, British Columbia, while interior sets were simply built on a sound stage.[13] The small town visited by the agents was filmed on location in Steveston, British Columbia—a location which would be revisited to film the first-season episode "Miracle Man".[14] The music used in the episode's nightclub scenes was recycled from composer Mark Snow's earlier work on the television film In the Line of Duty: Street War.[6]
+
+		Themes [edit]
+
+		"Gender Bender" has been interpreted as representing contemporary sexual anxieties in a figurative manner, conflating seduction with alien abduction. M. Keith Booker has described the Kindred's shapeshifting as representative of contemporary sexual anxieties caused by the changing gender roles of the decade, coupled with "a basic fear of sexual contact".[15] Antonio Ballesteros González has stated that the episode is representative of the series' exploration of both seduction and abduction, noting that "both are seen as part of sexual aggression",[16] further describing the episode's villain as representing "the fear of sex and reproduction".[17] The lethal nature of the Kindred's touch has been cited as representing the potency of their sexual repression;[18] and has been placed within a science-fiction tradition that depicts aliens or outsiders with a "potent" touch, alongside similar depictions in the films Communion and E.T. The Extra-Terrestrial, and the novel The Puppet Masters.[19]
+
+		Broadcast and reception [edit]
+
+
+
+		Asked about similarities between the Kindred and the Amish, Chris Carter said "they don't watch TV, so I wasn't worried about it".[6]
+		"Gender Bender" originally aired on Fox on January 21, 1994, and was first broadcast in the United Kingdom on BBC Two on December 22, 1994.[20] The episode earned a Nielsen household rating of 7.2, with a 12 share. It was viewed by 6.8 million households and 11.1 million viewers, meaning that roughly 7.2 percent of all television-equipped households, and 12 percent of households watching television, were tuned in to the episode.[21][22]
+
+		The episode faced criticism from the crew over its ending using a deus ex machina to indicate that the Kindred may have been aliens. Producer James Wong felt that the episode's ending seemed overly abrupt and unexpected, describing it as appearing "like we tried to play a trick on the audience to make them say 'Ooh, what the heck was that?'".[4] He added that the lack of a real connection to the episode's plot meant that the revelation lost any sense of catharsis for the viewer.[4] Morgan said that the episode "went too far. At what point do we become unbelievable?"[4] In addition, when asked about the similarity between the Kindred and the Amish, series creator Chris Carter noted that "they [the Amish] don't watch TV, so I wasn't worried about it".[6]
+
+		"Gender Bender" received generally positive to mixed reviews from critics. In a retrospective of the first season in Entertainment Weekly, "Gender Bender" was rated "B-", being described as a "clever idea" that was "undermined by a bushel of burning questions".[23] Zack Handlen, writing for The A.V. Club, praised the episode, rating it an "A". He felt that the plot was "a perfect mixture of scientific theory, unsubstantiated rumor, and memorable visuals".[24] Handlen felt that the episode effectively represented the ideal plot for The X-Files, featuring someone briefly interacting with supernatural phenomena without ever learning the truth of their experience.[24] Matt Haigh, writing for Den of Geek, reviewed "Gender Bender" positively, feeling that it was "a nicely refreshing and original idea", with "strikingly atmospheric" sets and "impressively spooky" villains.[25]
+
+		Robert Shearman and Lars Pearson, in their book Wanting to Believe: A Critical Guide to The X-Files, Millennium & The Lone Gunmen, rated "Gender Bender" one-and-half stars out of five, finding that it "finishes up ... entirely clichéd".[26] Shearman felt that Bowman's direction, and the contrast between "decadent" night-life and the "restraint and denial" of the Kindred, were highlights of the episode. However, he also felt that it approached its themes too conservatively and tamely, leaving a "boring" end result.[26] In his book The Nitpicker's Guide for X-Philes, author Phil Farrand has highlighted several inconsistencies in the episode, focusing on the implausible nature of the ending. Farrand cites the mention of the Kindred's pheromones containing human DNA and their use of the English language when in private as elements which seem incongruous for an alien race
+		</div>
+
+		<div class="loading-placeholder">
+			<img src="spinner.gif" class="loading">
+		</div>
+	</body>
+</html>
