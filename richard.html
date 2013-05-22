@@ -15,44 +15,42 @@
 		<script src="jquery-2.0.0.min.js"></script>
 		<script>
 		
-		var additionalPagesRequested = 0;
-		var additionalPagesLoaded = 0;
-		var fileToRequest = "";
-		
-/*		$(window).scroll(function() {
-			var distance = $(window).scrollTop() - $(document).height() + $(window).height();
-			console.log("scrollTop = ", $(window).scrollTop());
-			console.log("doc height = ", $(document).height());
-			console.log("window height = ", $(window).height());
-			console.log("***distance = ",distance);
-		}); */
-		
-		$(window).scroll(function() {
-			/* console.log("scrollTop = ", $(window).scrollTop());
-			console.log("doc height = ", $(document).height());
-			console.log("window height = ", $(window).height());
-			console.log("innerHeight = ", $(window).attr("innerHeight"));
-			console.log($(window)); */
+			var additionalPagesRequested = 0;
+			var additionalPagesLoaded = 0;
+			var fileToRequest = "";
 			
-			if($(window).scrollTop() + $(window).height() == $(document).height()) {
-				
-				$('.loading').css('display', 'block');
-				additionalPagesRequested++;
-								
-				fileToRequest = "scroll" + additionalPagesRequested + ".html";
-				
-				
-				$.get(fileToRequest, function(response) {
+	/*		$(window).scroll(function() {
+				var distance = $(window).scrollTop() - $(document).height() + $(window).height();
+				console.log("scrollTop = ", $(window).scrollTop());
+				console.log("doc height = ", $(document).height());
+				console.log("window height = ", $(window).height());
+				console.log("***distance = ",distance);
+			}); */
 			
-					$("<p></p>").html(response).appendTo('.content');
-					additionalPagesLoaded++;
+			$(window).scroll(function() {
+				/* console.log("scrollTop = ", $(window).scrollTop());
+				console.log("doc height = ", $(document).height());
+				console.log("window height = ", $(window).height());
+				console.log("innerHeight = ", $(window).attr("innerHeight"));
+				console.log($(window)); */
+				
+				if($(window).scrollTop() + $(window).height() == $(document).height()) {
 					
-				});
-			}
-		});
+					$('.loading').css('display', 'block');
+					additionalPagesRequested++;
+									
+					fileToRequest = "scroll" + additionalPagesRequested + ".html";
+					
+					
+					$.get(fileToRequest, function(response) {
+				
+						$("<p></p>").html(response).appendTo('.content');
+						additionalPagesLoaded++;
+						
+					});
+				}
+			});
 		
-		
-
 		</script>
 	</head>
 	<body>
