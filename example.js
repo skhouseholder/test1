@@ -10,10 +10,8 @@ var http = require('http');
 			response.writeHead(404, {'Content-Type': 'text/plain'});
 			response.end('404 not found =(');
 		} else {
-			setTimeout(function () {
 				response.writeHead(200, {'Content-Type': 'text/html'});
 				response.end(data);
-			}, 2000);
 		}
 	});
  };
